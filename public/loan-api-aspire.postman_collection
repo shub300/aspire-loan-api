@@ -1,0 +1,482 @@
+{
+	"info": {
+		"_postman_id": "f9d6a11e-e297-43ec-bbd1-d004820e625c",
+		"name": "loan-api-aspire",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost/aspire-loan-app/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"aspire-loan-app",
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "eebert@example.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "spassword",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/aspire-loan-app/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"aspire-loan-app",
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "loans",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/aspire-loan-app/api/loan",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"aspire-loan-app",
+						"api",
+						"loan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/aspire-loan-app/api/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"aspire-loan-app",
+						"api",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "loanById",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/aspire-loan-app/api/loan/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"aspire-loan-app",
+						"api",
+						"loan",
+						"1"
+					],
+					"query": [
+						{
+							"key": "Ac",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "loan create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token1}}",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "amount",
+							"value": "30",
+							"type": "text"
+						},
+						{
+							"key": "loan_term",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "interest_rate",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "repayment_amount",
+							"value": "6",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/aspire-loan-app/api/loan",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"aspire-loan-app",
+						"api",
+						"loan"
+					],
+					"query": [
+						{
+							"key": "A",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "repayments",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "repayment_amount",
+							"value": "200",
+							"type": "text"
+						},
+						{
+							"key": "loan_term",
+							"value": "50",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "interest_rate",
+							"value": "4",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "repayment_amount",
+							"value": "6",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/aspire-loan-app/api/repayments/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"aspire-loan-app",
+						"api",
+						"repayments",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "loan update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"amount\":30,\n    \"loan_term\":5,\n    \"interest_rate\":4,\n    \"repayment_amount\":6,\n    \"status\":\"Approved\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/aspire-loan-app/api/loan/18",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"aspire-loan-app",
+						"api",
+						"loan",
+						"18"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "loan delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"amount\":30,\n    \"loan_term\":5,\n    \"interest_rate\":4,\n    \"repayment_amount\":6,\n    \"status\":\"Approved\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/aspire-loan-app/api/loan/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"aspire-loan-app",
+						"api",
+						"loan",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "access_token",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2FzcGlyZS1sb2FuLWFwcC0xMVwvYXBpXC9sb2dpbiIsImlhdCI6MTY0NDUyNTEyNCwiZXhwIjoxNjQ0NTI4NzI0LCJuYmYiOjE2NDQ1MjUxMjQsImp0aSI6IjlJdEk1MkxDbmJ2SmlaR0kiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.8_dpRq26dVq9Y9OC4lg9f1hgoqjWR02Zzmoa7Q2E9-o"
+		}
+	]
+}
