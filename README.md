@@ -21,6 +21,13 @@ Setup .env file using .env.example using the below command
 ```bash
 cp .env.example .env
 ```
+
+___(Optional)___ Run below command to generate one time JWT secret for your application
+___Default token already configured in .env for generating new token run below command___
+
+```bash
+php artisan jwt:secret
+```
  
 Migrate database structure using the below command
 ```bash
